@@ -8,6 +8,16 @@ Mario Bros Arcade
 # dependencies = ["pyxel>=2.0"]
 # ///
 
+import os
+import sys
+
+# flat imports across src/, src/enemy/ and src/scene/
+_SRC = os.path.dirname(__file__)
+for _d in (_SRC, os.path.join(_SRC, "enemy"), os.path.join(_SRC, "scene")):
+    sys.path.insert(0, _d)
+# assets (sprites.pyxres, highscores.txt) live in the repo root
+os.chdir(os.path.dirname(_SRC))
+
 import pyxel
 import random
 from mario_module import Mario

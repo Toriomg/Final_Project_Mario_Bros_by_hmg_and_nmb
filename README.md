@@ -7,11 +7,17 @@ Autores: Héctor Molina Garde & Nicolás Maire Bravo
 ## Ejecutar
 
 ```bash
-uv run main.py
+uv run src/main.py
 ```
 
-`uv` lee las dependencias del bloque `# /// script` al principio de `main.py`
+`uv` lee las dependencias del bloque `# /// script` al principio de `src/main.py`
 (solo `pyxel`) y las instala automáticamente.
+
+## Estructura
+
+- `src/` — juego principal (`main.py`, `mario_module.py`, `Constants.py`, `Highscore.py`)
+- `src/enemy/` — enemigos y monedas
+- `src/scene/` — escenario y attrezo (plataformas, bloques, tuberías, POW)
 
 ## Controles
 
